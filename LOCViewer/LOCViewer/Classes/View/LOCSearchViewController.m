@@ -8,7 +8,10 @@
 
 #import "LOCSearchViewController.h"
 #import "LOCClient.h"
+#import "LOCPicture.h"
 #import "LOCSearchViewCell.h"
+
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface LOCSearchViewController ()
 
@@ -61,6 +64,16 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     LOCSearchViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([LOCSearchViewCell class]) forIndexPath:indexPath];
+    
+    LOCPicture *picture = [self.dataSource objectAtIndex:indexPath.row];
+    [cell.title setText:[picture title]];
+    [cell.image setImageWithURL:[picture imageURL]
+               placeholderImage:nil
+                      completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
+//                          if (!error) {
+//                              [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+//                          }
+                      }];
     
     return cell;
 }

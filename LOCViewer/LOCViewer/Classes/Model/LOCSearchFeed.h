@@ -15,6 +15,6 @@
 @property (nonatomic, readonly) NSInteger totalPages;
 @property (nonatomic, copy, readonly) NSString *query;
 
-@property (atomic, copy) NSArray *results;
+@property (nonatomic, copy) NSArray *results;
 
 @end

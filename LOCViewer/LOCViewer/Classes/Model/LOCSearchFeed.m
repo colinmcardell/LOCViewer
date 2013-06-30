@@ -21,7 +21,7 @@
             }];
 }
 
-+ (NSValueTransformer *)resultsTransformer
++ (NSValueTransformer *)resultsJSONTransformer
 {
     return [NSValueTransformer mtl_JSONArrayTransformerWithModelClass:[LOCPicture class]];
 }
