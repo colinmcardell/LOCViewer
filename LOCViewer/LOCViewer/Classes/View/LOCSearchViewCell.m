@@ -7,23 +7,22 @@
 //
 
 #import "LOCSearchViewCell.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @implementation LOCSearchViewCell
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+- (void)awakeFromNib
 {
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        // Initialization code
-    }
-    return self;
+    [super awakeFromNib];
+    
+    [self.contentView setBackgroundColor:[UIColor grayColor]];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+- (void)prepareForReuse
 {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+    [super prepareForReuse];
+    
+    [self.image cancelCurrentImageLoad];
 }
 
 @end

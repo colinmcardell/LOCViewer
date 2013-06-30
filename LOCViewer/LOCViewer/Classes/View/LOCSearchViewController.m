@@ -8,6 +8,7 @@
 
 #import "LOCSearchViewController.h"
 #import "LOCClient.h"
+#import "LOCSearchFeed.h"
 #import "LOCPicture.h"
 #import "LOCSearchViewCell.h"
 
@@ -15,64 +16,69 @@
 
 @interface LOCSearchViewController ()
 
+@property (strong, nonatomic) LOCSearchFeed *searchFeed;
 @property (strong, nonatomic) NSMutableArray *dataSource;
 
 @end
 
 @implementation LOCSearchViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    NSString *searchCellClass = NSStringFromClass([LOCSearchViewCell class]);
-    [self.tableView registerNib:[UINib nibWithNibName:searchCellClass bundle:[NSBundle mainBundle]] forCellReuseIdentifier:searchCellClass];
+    [self.tableView setBackgroundColor:[UIColor grayColor]];
     
-    [[LOCClient sharedClient] executeSearch:@"congress" completionBlock:^(OVCRequestOperation *operation, id object, NSError *error) {
-        [self setDataSource:[[object valueForKey:@"results"] mutableCopy]];
-        [self.tableView reloadData];
-    }];
+    NSBundle *bundle = [NSBundle mainBundle];
+    
+    // Cell
+    NSString *searchCellClass = NSStringFromClass([LOCSearchViewCell class]);
+    UINib *searchCellNib = [UINib nibWithNibName:searchCellClass bundle:bundle];
+    [self.tableView registerNib:searchCellNib forCellReuseIdentifier:searchCellClass];
+    
+    // Fetch some data
+    [[LOCClient sharedClient] executeSearch:@"congress"
+                            completionBlock:^(OVCRequestOperation *operation, id object, NSError *error) {
+                                [self setSearchFeed:object];
+                                [self setDataSource:[[object valueForKey:@"results"] mutableCopy]];
+                                [self.tableView reloadData];
+                            }];
 }
 
-- (void)didReceiveMemoryWarning
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return [self.dataSource count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.dataSource count];
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    LOCSearchViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([LOCSearchViewCell class]) forIndexPath:indexPath];
+    LOCSearchViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([LOCSearchViewCell class])];
     
-    LOCPicture *picture = [self.dataSource objectAtIndex:indexPath.row];
+    LOCPicture *picture = [self.dataSource objectAtIndex:indexPath.section];
+    
     [cell.title setText:[picture title]];
+    NSString *notAvailable = @"Information Not Available";
+    [cell.publish setText:[picture createdPublishedDate] ? [picture createdPublishedDate] : notAvailable];
+    [cell.medium setText:[picture medium] ? [picture medium] : notAvailable];
+    [cell.creator setText:[picture creator] ? [picture creator] : notAvailable];
+
     [cell.image setImageWithURL:[picture imageURL]
                placeholderImage:nil
                       completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
-//                          if (!error) {
-//                              [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-//                          }
+                          // Could set the image to an error loading image or something right here...
                       }];
     
     return cell;
@@ -82,6 +88,13 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 44.0f;
+    return 130.0f;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    LOCPicture *picture = [self.dataSource objectAtIndex:indexPath.row];
+    DLog(@"%@", picture);
+}
+
 @end
