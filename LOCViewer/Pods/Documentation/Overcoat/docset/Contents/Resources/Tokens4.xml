@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/OVCRequestOperation.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/OVCRequestOperation</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OVCRequestOperation.h</DeclaredIn>
+			
+			<NodeRef refid="4"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/OVCRequestOperation/setTransformBlock:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OVCRequestOperation.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, nonatomic) OVCTransformBlock transformBlock</Declaration>
+			
+			
+			<Anchor>//api/name/transformBlock</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/OVCRequestOperation/transformBlock</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OVCRequestOperation.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, nonatomic) OVCTransformBlock transformBlock</Declaration>
+			
+			
+			<Anchor>//api/name/transformBlock</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/OVCRequestOperation/setResponseObject:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OVCRequestOperation.h</DeclaredIn>			
+			
+			<Declaration>@property (strong, nonatomic, readonly) id responseObject</Declaration>
+			
+			
+			<Anchor>//api/name/responseObject</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/OVCRequestOperation/responseObject</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OVCRequestOperation.h</DeclaredIn>			
+			
+			<Declaration>@property (strong, nonatomic, readonly) id responseObject</Declaration>
+			
+			
+			<Anchor>//api/name/responseObject</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/OVCRequestOperation/initWithRequest:transformBlock:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OVCRequestOperation.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithRequest:(NSURLRequest *)urlRequest transformBlock:(OVCTransformBlock)transformBlock</Declaration>
+			
+			
+			<Anchor>//api/name/initWithRequest:transformBlock:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

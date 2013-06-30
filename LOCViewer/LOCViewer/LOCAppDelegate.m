@@ -9,6 +9,7 @@
 #import "LOCAppDelegate.h"
 
 #import "AFNetworkActivityIndicatorManager.h"
+#import "LOCSearchViewController.h"
 
 @implementation LOCAppDelegate
 
@@ -20,8 +21,8 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     
     [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
     
-    UIViewController *viewController = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
-    self.navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    LOCSearchViewController *searchVC = [[LOCSearchViewController alloc] initWithNibName:NSStringFromClass([LOCSearchViewController class]) bundle:[NSBundle mainBundle]];
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:searchVC];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = self.navigationController;

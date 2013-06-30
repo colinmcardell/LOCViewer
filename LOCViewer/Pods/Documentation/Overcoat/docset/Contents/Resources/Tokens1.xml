@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/OVCClient.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/OVCClient</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OVCClient.h</DeclaredIn>
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/OVCClient/executeQuery:completionBlock:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OVCClient.h</DeclaredIn>			
+			
+			<Declaration>- (OVCRequestOperation *)executeQuery:(OVCQuery *)query completionBlock:(void ( ^ ) ( OVCRequestOperation *operation , id object , NSError *error ))block</Declaration>
+			
+			
+			<Anchor>//api/name/executeQuery:completionBlock:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/OVCClient/requestWithQuery:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OVCClient.h</DeclaredIn>			
+			
+			<Declaration>- (NSMutableURLRequest *)requestWithQuery:(OVCQuery *)query</Declaration>
+			
+			
+			<Anchor>//api/name/requestWithQuery:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

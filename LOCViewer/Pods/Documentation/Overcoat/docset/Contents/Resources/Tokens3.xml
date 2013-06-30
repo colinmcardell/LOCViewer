@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/OVCQuery.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/OVCQuery</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OVCQuery.h</DeclaredIn>
+			
+			<NodeRef refid="3"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/OVCQuery/setMethod:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OVCQuery.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) OVCQueryMethod method</Declaration>
+			
+			
+			<Anchor>//api/name/method</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/OVCQuery/method</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OVCQuery.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) OVCQueryMethod method</Declaration>
+			
+			
+			<Anchor>//api/name/method</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/OVCQuery/setPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OVCQuery.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, nonatomic) NSString *path</Declaration>
+			
+			
+			<Anchor>//api/name/path</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/OVCQuery/path</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OVCQuery.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, nonatomic) NSString *path</Declaration>
+			
+			
+			<Anchor>//api/name/path</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/OVCQuery/setParameters:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OVCQuery.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, nonatomic) NSDictionary *parameters</Declaration>
+			
+			
+			<Anchor>//api/name/parameters</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/OVCQuery/parameters</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OVCQuery.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, nonatomic) NSDictionary *parameters</Declaration>
+			
+			
+			<Anchor>//api/name/parameters</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/OVCQuery/setParts:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OVCQuery.h</DeclaredIn>			
+			
+			<Declaration>@property (strong, nonatomic, readonly) NSArray *parts</Declaration>
+			
+			
+			<Anchor>//api/name/parts</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/OVCQuery/parts</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OVCQuery.h</DeclaredIn>			
+			
+			<Declaration>@property (strong, nonatomic, readonly) NSArray *parts</Declaration>
+			
+			
+			<Anchor>//api/name/parts</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/OVCQuery/setTransformBlock:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OVCQuery.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, nonatomic) OVCTransformBlock transformBlock</Declaration>
+			
+			
+			<Anchor>//api/name/transformBlock</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/OVCQuery/transformBlock</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OVCQuery.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, nonatomic) OVCTransformBlock transformBlock</Declaration>
+			
+			
+			<Anchor>//api/name/transformBlock</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/OVCQuery/transformBlockWithModelClass:objectKeyPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OVCQuery.h</DeclaredIn>			
+			
+			<Declaration>+ (OVCTransformBlock)transformBlockWithModelClass:(Class)modelClass objectKeyPath:(NSString *)keyPath</Declaration>
+			
+			
+			<Anchor>//api/name/transformBlockWithModelClass:objectKeyPath:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/OVCQuery/queryWithMethod:path:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OVCQuery.h</DeclaredIn>			
+			
+			<Declaration>+ (instancetype)queryWithMethod:(OVCQueryMethod)method path:(NSString *)path</Declaration>
+			
+			
+			<Anchor>//api/name/queryWithMethod:path:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/OVCQuery/queryWithMethod:path:parameters:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OVCQuery.h</DeclaredIn>			
+			
+			<Declaration>+ (instancetype)queryWithMethod:(OVCQueryMethod)method path:(NSString *)path parameters:(NSDictionary *)parameters</Declaration>
+			
+			
+			<Anchor>//api/name/queryWithMethod:path:parameters:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/OVCQuery/queryWithMethod:path:modelClass:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OVCQuery.h</DeclaredIn>			
+			
+			<Declaration>+ (instancetype)queryWithMethod:(OVCQueryMethod)method path:(NSString *)path modelClass:(Class)modelClass</Declaration>
+			
+			
+			<Anchor>//api/name/queryWithMethod:path:modelClass:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/OVCQuery/queryWithMethod:path:parameters:modelClass:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OVCQuery.h</DeclaredIn>			
+			
+			<Declaration>+ (instancetype)queryWithMethod:(OVCQueryMethod)method path:(NSString *)path parameters:(NSDictionary *)parameters modelClass:(Class)modelClass</Declaration>
+			
+			
+			<Anchor>//api/name/queryWithMethod:path:parameters:modelClass:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/OVCQuery/queryWithMethod:path:parameters:modelClass:objectKeyPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OVCQuery.h</DeclaredIn>			
+			
+			<Declaration>+ (instancetype)queryWithMethod:(OVCQueryMethod)method path:(NSString *)path parameters:(NSDictionary *)parameters modelClass:(Class)modelClass objectKeyPath:(NSString *)keyPath</Declaration>
+			
+			
+			<Anchor>//api/name/queryWithMethod:path:parameters:modelClass:objectKeyPath:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/OVCQuery/initWithMethod:path:parameters:transformBlock:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OVCQuery.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithMethod:(OVCQueryMethod)method path:(NSString *)path parameters:(NSDictionary *)parameters transformBlock:(OVCTransformBlock)transformBlock</Declaration>
+			
+			
+			<Anchor>//api/name/initWithMethod:path:parameters:transformBlock:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/OVCQuery/addMultipartData:withName:type:filename:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OVCQuery.h</DeclaredIn>			
+			
+			<Declaration>- (void)addMultipartData:(NSData *)data withName:(NSString *)name type:(NSString *)mimeType filename:(NSString *)filename</Declaration>
+			
+			
+			<Anchor>//api/name/addMultipartData:withName:type:filename:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

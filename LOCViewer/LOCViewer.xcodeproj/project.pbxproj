@@ -12,13 +12,22 @@
 		F7BAB3621780972B0000897D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7BAB3611780972B0000897D /* Foundation.framework */; };
 		F7BAB3641780972B0000897D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7BAB3631780972B0000897D /* CoreGraphics.framework */; };
 		F7BAB3671780972B0000897D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = F7BAB3661780972B0000897D /* Podfile */; };
-		F7BAB36D1780972B0000897D /* LOCViewerAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BAB36C1780972B0000897D /* LOCViewerAPIClient.m */; };
 		F7BAB3711780972B0000897D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F7BAB36F1780972B0000897D /* InfoPlist.strings */; };
 		F7BAB3731780972B0000897D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BAB3721780972B0000897D /* main.m */; };
 		F7BAB3761780972B0000897D /* LOCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BAB3751780972B0000897D /* LOCAppDelegate.m */; };
 		F7BAB3781780972B0000897D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F7BAB3771780972B0000897D /* Default.png */; };
 		F7BAB37A1780972B0000897D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7BAB3791780972B0000897D /* Default@2x.png */; };
 		F7BAB37C1780972B0000897D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7BAB37B1780972B0000897D /* Default-568h@2x.png */; };
+		F7BAB38B17809B810000897D /* LOCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BAB38A17809B810000897D /* LOCObject.m */; };
+		F7BAB38E17809D110000897D /* LOCPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BAB38D17809D110000897D /* LOCPicture.m */; };
+		F7BAB39117809D890000897D /* LOCSearchFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BAB39017809D890000897D /* LOCSearchFeed.m */; };
+		F7BAB3941780A9A80000897D /* LOCClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BAB3931780A9A80000897D /* LOCClient.m */; };
+		F7BAB3981780AA3D0000897D /* LOCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BAB3971780AA3D0000897D /* LOCViewController.m */; };
+		F7BAB39E1780AAD90000897D /* LOCSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BAB39C1780AAD90000897D /* LOCSearchViewController.m */; };
+		F7BAB39F1780AAD90000897D /* LOCSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7BAB39D1780AAD90000897D /* LOCSearchViewController.xib */; };
+		F7BAB3AC1780B53E0000897D /* LOCRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BAB3AB1780B53E0000897D /* LOCRequestOperation.m */; };
+		F7BAB3AF1780B75D0000897D /* LOCSearchViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BAB3AE1780B75D0000897D /* LOCSearchViewCell.m */; };
+		F7BAB3B11780B7720000897D /* LOCSearchViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7BAB3B01780B7720000897D /* LOCSearchViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +39,6 @@
 		F7BAB3631780972B0000897D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		F7BAB3661780972B0000897D /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F7BAB3691780972B0000897D /* LOCViewer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LOCViewer-Prefix.pch"; sourceTree = "<group>"; };
-		F7BAB36B1780972B0000897D /* LOCViewerAPIClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LOCViewerAPIClient.h; path = Classes/LOCViewerAPIClient.h; sourceTree = "<group>"; };
-		F7BAB36C1780972B0000897D /* LOCViewerAPIClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LOCViewerAPIClient.m; path = Classes/LOCViewerAPIClient.m; sourceTree = "<group>"; };
 		F7BAB36E1780972B0000897D /* LOCViewer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LOCViewer-Info.plist"; sourceTree = "<group>"; };
 		F7BAB3701780972B0000897D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F7BAB3721780972B0000897D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +47,25 @@
 		F7BAB3771780972B0000897D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		F7BAB3791780972B0000897D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		F7BAB37B1780972B0000897D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F7BAB38917809B810000897D /* LOCObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOCObject.h; path = Classes/Model/LOCObject.h; sourceTree = "<group>"; };
+		F7BAB38A17809B810000897D /* LOCObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOCObject.m; path = Classes/Model/LOCObject.m; sourceTree = "<group>"; };
+		F7BAB38C17809D110000897D /* LOCPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOCPicture.h; path = Classes/Model/LOCPicture.h; sourceTree = "<group>"; };
+		F7BAB38D17809D110000897D /* LOCPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOCPicture.m; path = Classes/Model/LOCPicture.m; sourceTree = "<group>"; };
+		F7BAB38F17809D890000897D /* LOCSearchFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOCSearchFeed.h; path = Classes/Model/LOCSearchFeed.h; sourceTree = "<group>"; };
+		F7BAB39017809D890000897D /* LOCSearchFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOCSearchFeed.m; path = Classes/Model/LOCSearchFeed.m; sourceTree = "<group>"; };
+		F7BAB3921780A9A80000897D /* LOCClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOCClient.h; path = Classes/Networking/LOCClient.h; sourceTree = "<group>"; };
+		F7BAB3931780A9A80000897D /* LOCClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOCClient.m; path = Classes/Networking/LOCClient.m; sourceTree = "<group>"; };
+		F7BAB3961780AA3D0000897D /* LOCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOCViewController.h; path = Classes/View/LOCViewController.h; sourceTree = "<group>"; };
+		F7BAB3971780AA3D0000897D /* LOCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOCViewController.m; path = Classes/View/LOCViewController.m; sourceTree = "<group>"; };
+		F7BAB3991780AA7B0000897D /* CSDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSDebug.h; path = "Other Sources/CSDebug.h"; sourceTree = "<group>"; };
+		F7BAB39B1780AAD90000897D /* LOCSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOCSearchViewController.h; path = Classes/View/LOCSearchViewController.h; sourceTree = "<group>"; };
+		F7BAB39C1780AAD90000897D /* LOCSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOCSearchViewController.m; path = Classes/View/LOCSearchViewController.m; sourceTree = "<group>"; };
+		F7BAB39D1780AAD90000897D /* LOCSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LOCSearchViewController.xib; path = Classes/View/LOCSearchViewController.xib; sourceTree = "<group>"; };
+		F7BAB3AA1780B53E0000897D /* LOCRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOCRequestOperation.h; path = Classes/Networking/LOCRequestOperation.h; sourceTree = "<group>"; };
+		F7BAB3AB1780B53E0000897D /* LOCRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOCRequestOperation.m; path = Classes/Networking/LOCRequestOperation.m; sourceTree = "<group>"; };
+		F7BAB3AD1780B75D0000897D /* LOCSearchViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LOCSearchViewCell.h; path = Classes/View/LOCSearchViewCell.h; sourceTree = "<group>"; };
+		F7BAB3AE1780B75D0000897D /* LOCSearchViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LOCSearchViewCell.m; path = Classes/View/LOCSearchViewCell.m; sourceTree = "<group>"; };
+		F7BAB3B01780B7720000897D /* LOCSearchViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LOCSearchViewCell.xib; path = Classes/View/LOCSearchViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,8 +118,11 @@
 				F7BAB3661780972B0000897D /* Podfile */,
 				F7BAB3741780972B0000897D /* LOCAppDelegate.h */,
 				F7BAB3751780972B0000897D /* LOCAppDelegate.m */,
+				F7BAB38817809B590000897D /* Model */,
 				F7BAB36A1780972B0000897D /* Networking */,
+				F7BAB39A1780AA7F0000897D /* Other Sources */,
 				F7BAB3681780972B0000897D /* Supporting Files */,
+				F7BAB3951780AA1E0000897D /* View */,
 			);
 			path = LOCViewer;
 			sourceTree = "<group>";
@@ -115,10 +144,48 @@
 		F7BAB36A1780972B0000897D /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				F7BAB36B1780972B0000897D /* LOCViewerAPIClient.h */,
-				F7BAB36C1780972B0000897D /* LOCViewerAPIClient.m */,
+				F7BAB3921780A9A80000897D /* LOCClient.h */,
+				F7BAB3931780A9A80000897D /* LOCClient.m */,
+				F7BAB3AA1780B53E0000897D /* LOCRequestOperation.h */,
+				F7BAB3AB1780B53E0000897D /* LOCRequestOperation.m */,
 			);
 			name = Networking;
+			sourceTree = "<group>";
+		};
+		F7BAB38817809B590000897D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F7BAB38917809B810000897D /* LOCObject.h */,
+				F7BAB38A17809B810000897D /* LOCObject.m */,
+				F7BAB38C17809D110000897D /* LOCPicture.h */,
+				F7BAB38D17809D110000897D /* LOCPicture.m */,
+				F7BAB38F17809D890000897D /* LOCSearchFeed.h */,
+				F7BAB39017809D890000897D /* LOCSearchFeed.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F7BAB3951780AA1E0000897D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F7BAB3AD1780B75D0000897D /* LOCSearchViewCell.h */,
+				F7BAB3AE1780B75D0000897D /* LOCSearchViewCell.m */,
+				F7BAB3B01780B7720000897D /* LOCSearchViewCell.xib */,
+				F7BAB39B1780AAD90000897D /* LOCSearchViewController.h */,
+				F7BAB39C1780AAD90000897D /* LOCSearchViewController.m */,
+				F7BAB39D1780AAD90000897D /* LOCSearchViewController.xib */,
+				F7BAB3961780AA3D0000897D /* LOCViewController.h */,
+				F7BAB3971780AA3D0000897D /* LOCViewController.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F7BAB39A1780AA7F0000897D /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F7BAB3991780AA7B0000897D /* CSDebug.h */,
+			);
+			name = "Other Sources";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +247,8 @@
 				F7BAB3781780972B0000897D /* Default.png in Resources */,
 				F7BAB37A1780972B0000897D /* Default@2x.png in Resources */,
 				F7BAB37C1780972B0000897D /* Default-568h@2x.png in Resources */,
+				F7BAB39F1780AAD90000897D /* LOCSearchViewController.xib in Resources */,
+				F7BAB3B11780B7720000897D /* LOCSearchViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,9 +290,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7BAB36D1780972B0000897D /* LOCViewerAPIClient.m in Sources */,
 				F7BAB3731780972B0000897D /* main.m in Sources */,
 				F7BAB3761780972B0000897D /* LOCAppDelegate.m in Sources */,
+				F7BAB38B17809B810000897D /* LOCObject.m in Sources */,
+				F7BAB38E17809D110000897D /* LOCPicture.m in Sources */,
+				F7BAB39117809D890000897D /* LOCSearchFeed.m in Sources */,
+				F7BAB3941780A9A80000897D /* LOCClient.m in Sources */,
+				F7BAB3981780AA3D0000897D /* LOCViewController.m in Sources */,
+				F7BAB39E1780AAD90000897D /* LOCSearchViewController.m in Sources */,
+				F7BAB3AC1780B53E0000897D /* LOCRequestOperation.m in Sources */,
+				F7BAB3AF1780B75D0000897D /* LOCSearchViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

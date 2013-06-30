@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/OVCSocialClient.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/OVCSocialClient</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OVCSocialClient.h</DeclaredIn>
+			
+			<NodeRef refid="5"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/OVCSocialClient/setAccount:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OVCSocialClient.h</DeclaredIn>			
+			
+			<Declaration>@property (strong, nonatomic) ACAccount *account</Declaration>
+			
+			
+			<Anchor>//api/name/account</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/OVCSocialClient/account</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OVCSocialClient.h</DeclaredIn>			
+			
+			<Declaration>@property (strong, nonatomic) ACAccount *account</Declaration>
+			
+			
+			<Anchor>//api/name/account</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/OVCSocialClient/setServiceType:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OVCSocialClient.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, nonatomic) NSString *serviceType</Declaration>
+			
+			
+			<Anchor>//api/name/serviceType</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/OVCSocialClient/serviceType</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>OVCSocialClient.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, nonatomic) NSString *serviceType</Declaration>
+			
+			
+			<Anchor>//api/name/serviceType</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

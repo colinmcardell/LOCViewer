@@ -9,7 +9,7 @@
 // AFNetworking
 #define COCOAPODS_POD_AVAILABLE_AFNetworking
 #define COCOAPODS_VERSION_MAJOR_AFNetworking 1
-#define COCOAPODS_VERSION_MINOR_AFNetworking 3
+#define COCOAPODS_VERSION_MINOR_AFNetworking 2
 #define COCOAPODS_VERSION_PATCH_AFNetworking 1
 
 // FormatterKit
@@ -65,6 +65,12 @@
 #define COCOAPODS_VERSION_MAJOR_Mantle 1
 #define COCOAPODS_VERSION_MINOR_Mantle 1
 #define COCOAPODS_VERSION_PATCH_Mantle 0
+
+// Overcoat
+#define COCOAPODS_POD_AVAILABLE_Overcoat
+#define COCOAPODS_VERSION_MAJOR_Overcoat 0
+#define COCOAPODS_VERSION_MINOR_Overcoat 2
+#define COCOAPODS_VERSION_PATCH_Overcoat 0
 
 // SDWebImage
 #define COCOAPODS_POD_AVAILABLE_SDWebImage

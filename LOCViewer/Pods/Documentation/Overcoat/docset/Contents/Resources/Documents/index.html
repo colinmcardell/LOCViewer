@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Overcoat 0.2 Reference</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 840)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="index.html">Overcoat 0.2 </a></h1>
+				<a id="developerHome" href="index.html">Guillermo Gonzalez</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">Overcoat 0.2 Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar"></ul>
+		</header>
+		<article>
+			<div id="overview_contents" role="main">
+				<div class="main-navigation navigation-top">
+					<a href="hierarchy.html">Next</a>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">Overcoat 0.2 Reference</h1>
+					</div>		
+				</div>
+				<div id="container">
+					
+					<div class="section section-overview index-overview">
+						
+						
+						<h1>Overcoat</h1>
+
+<p>Overcoat is an <a href="https://github.com/AFNetworking/AFNetworking">AFNetworking</a> extension that makes it super simple for developers to use Mantle model objects with a REST client.</p>
+
+<p>You can learn more about Mantle <a href="https://github.com/github/Mantle/blob/master/README.md">here</a>.</p>
+
+<h2>Usage</h2>
+
+<p>In Overcoat, server API requests are defined by instances of the <a href="Classes/OVCQuery.html"><code>OVCQuery</code></a> class. Using <a href="Classes/OVCQuery.html"><code>OVCQuery</code></a> you can specify an HTTP method, a path that identifies the resource, a set of parameters, and a model class.</p>
+
+<p>Servers typically respond to client API request with a dictionary or an array of dictionaries. Overcoat will transparently map those into model objects in a background queue.</p>
+
+<p>For example, using <a href="https://github.com/github/Mantle/blob/master/README.md#mtlmodel">this</a> model of a GitHub issue, here is how we could use the <a href="http://developer.github.com">GitHub API</a> to list all the closed issues.</p>
+
+<p>```objc
+<a href="Classes/OVCClient.html">OVCClient</a> *gitHubClient = [[OVCClient alloc] initWithBaseURL:[NSURL URLWithString:@&ldquo;<a href="https://api.github.com">https://api.github.com</a>&rdquo;]];
+[gitHubClient setAuthorizationHeaderWithUsername:@&ldquo;johndoe&rdquo; password:@&ldquo;secret&rdquo;];</p>
+
+<p><a href="Classes/OVCQuery.html">OVCQuery</a> *closedIssues = [OVCQuery queryWithMethod:OVCQueryMethodGet path:@&ldquo;/user/issues&rdquo; parameters:@{</p>
+
+<pre><code>    @"state" : @"closed"
+</code></pre>
+
+<p>} modelClass:[GHIssue class]];</p>
+
+<p>[gitHubClient executeQuery:closedIssues completionBlock:^(<a href="Classes/OVCRequestOperation.html">OVCRequestOperation</a> <em>operation, NSArray </em>issues, NSError *error) {</p>
+
+<pre><code>if (!error) {
+    for (GHIssue *issue in issues) {
+        NSLog(@"issue: %@ title: %@", issue.number, issue.title);
+    }
+}
+</code></pre>
+
+<p>}];
+```</p>
+
+<h3>Social Client</h3>
+
+<p>Overcoat features a special client class which can authenticate API requests using an <code>ACAccount</code> object on supported social networking services (currently Twitter, Facebook, and Sina Weibo).</p>
+
+<p>Here is how we could lookup for Twitter users.</p>
+
+<p>```objc
+@interface TwitterUser : MTLModel</p>
+
+<p>@property (copy, nonatomic) NSString <em>identifier;
+@property (copy, nonatomic) NSString </em>name;
+@property (copy, nonatomic) NSString <em>screenName;
+@property (copy, nonatomic) NSURL </em>profileImageURL;</p>
+
+<p>@end
+```</p>
+
+<p>```objc
+@implementation TwitterUser</p>
+
+<ul>
+<li><p>(NSDictionary *)JSONKeyPathsByPropertyKey {
+  return @{
+      @&ldquo;identifier&rdquo;: @&ldquo;id_str&rdquo;,
+      @&ldquo;screenName&rdquo;: @&ldquo;screen_name&rdquo;,
+      @&ldquo;profileImageURL&rdquo;: @&ldquo;profile_image_url&rdquo;
+  };
+}</p></li>
+<li><p>(NSValueTransformer *)profileImageURLJSONTransformer {
+  return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
+}</p></li>
+</ul>
+
+
+<p>@end
+```</p>
+
+<p>```objc
+<a href="Classes/OVCSocialClient.html">OVCSocialClient</a> *twitterClient = [[OVCSocialClient alloc] initWithBaseURL:[NSURL URLWithString:@&ldquo;<a href="https://api.twitter.com/1.1">https://api.twitter.com/1.1</a>&rdquo;]];
+twitterClient.account = myAccount;</p>
+
+<p><a href="Classes/OVCQuery.html">OVCQuery</a> *lookupUsers = [OVCQuery queryWithMethod:OVCQueryMethodGet path:@&ldquo;/users/lookup.json&rdquo; parameters:@{</p>
+
+<pre><code>    @"screen_name" : @"twitterapi,twitter"
+</code></pre>
+
+<p>} modelClass:[TwitterUser class]];</p>
+
+<p>[twitterClient executeQuery:lookupUsers completionBlock:^(<a href="Classes/OVCRequestOperation.html">OVCRequestOperation</a> <em>operation, NSArray </em>users, NSError *error) {</p>
+
+<pre><code>if (!error) {
+    for (TwitterUser *user in users) {
+        NSLog(@"name: %@ screenName: %@", user.name, user.screenName);
+    }
+}
+</code></pre>
+
+<p>}];
+```</p>
+
+<h2>Contact</h2>
+
+<p><a href="http://github.com/gonzalezreal">Guillermo Gonzalez</a><br/>
+<a href="https://twitter.com/gonzalezreal">@gonzalezreal</a></p>
+
+<h2>License</h2>
+
+<p>Overcoat is available under the MIT license. See <a href="https://github.com/gonzalezreal/Overcoat/blob/master/LICENSE">LICENSE.md</a>.</p>
+						
+						
+					</div>
+					
+                        
+                    
+					
+					
+					<div class="index-column">
+						<h2 class="index-title">Class References</h2>
+						<ul>
+							
+							<li><a href="Classes/OVCClient.html">OVCClient</a></li>
+							
+							<li><a href="Classes/OVCMultipartPart.html">OVCMultipartPart</a></li>
+							
+							<li><a href="Classes/OVCQuery.html">OVCQuery</a></li>
+							
+							<li><a href="Classes/OVCRequestOperation.html">OVCRequestOperation</a></li>
+							
+							<li><a href="Classes/OVCSocialClient.html">OVCSocialClient</a></li>
+							
+						</ul>
+					</div>
+					
+					
+						
+					<div class="index-column">
+						
+						
+						<h2 class="index-title">Category References</h2>
+						<ul>
+							
+							<li><a href="Categories/NSDictionary+Overcoat.html">NSDictionary(Overcoat)</a></li>
+							
+						</ul>
+						
+					</div>
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<a href="hierarchy.html">Next</a>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Guillermo Gonzalez. All rights reserved. (Last updated: 2013-06-30)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
+						
+	
+					</div>
+				</div>
+			</div>
+		</article>		
+	</body>
+</html>

@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/colinmcardell/Library/Developer/Shared/Documentation/DocSets/org.cocoapods.overcoat.Overcoat-0.2.docset
+Time: 2013-06-30 17:46:28 +0000
