@@ -1,0 +1,348 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		74F5136853D6412890446476 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A38DFE4103A45E6B21898A4 /* libPods.a */; };
+		F7BAB3601780972B0000897D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7BAB35F1780972B0000897D /* UIKit.framework */; };
+		F7BAB3621780972B0000897D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7BAB3611780972B0000897D /* Foundation.framework */; };
+		F7BAB3641780972B0000897D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7BAB3631780972B0000897D /* CoreGraphics.framework */; };
+		F7BAB3671780972B0000897D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = F7BAB3661780972B0000897D /* Podfile */; };
+		F7BAB36D1780972B0000897D /* LOCViewerAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BAB36C1780972B0000897D /* LOCViewerAPIClient.m */; };
+		F7BAB3711780972B0000897D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F7BAB36F1780972B0000897D /* InfoPlist.strings */; };
+		F7BAB3731780972B0000897D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BAB3721780972B0000897D /* main.m */; };
+		F7BAB3761780972B0000897D /* LOCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BAB3751780972B0000897D /* LOCAppDelegate.m */; };
+		F7BAB3781780972B0000897D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F7BAB3771780972B0000897D /* Default.png */; };
+		F7BAB37A1780972B0000897D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7BAB3791780972B0000897D /* Default@2x.png */; };
+		F7BAB37C1780972B0000897D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7BAB37B1780972B0000897D /* Default-568h@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1A38DFE4103A45E6B21898A4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		995099E64E2A4E2CB569CF21 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		F7BAB35C1780972B0000897D /* LOCViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LOCViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7BAB35F1780972B0000897D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F7BAB3611780972B0000897D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F7BAB3631780972B0000897D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F7BAB3661780972B0000897D /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F7BAB3691780972B0000897D /* LOCViewer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LOCViewer-Prefix.pch"; sourceTree = "<group>"; };
+		F7BAB36B1780972B0000897D /* LOCViewerAPIClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LOCViewerAPIClient.h; path = Classes/LOCViewerAPIClient.h; sourceTree = "<group>"; };
+		F7BAB36C1780972B0000897D /* LOCViewerAPIClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LOCViewerAPIClient.m; path = Classes/LOCViewerAPIClient.m; sourceTree = "<group>"; };
+		F7BAB36E1780972B0000897D /* LOCViewer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LOCViewer-Info.plist"; sourceTree = "<group>"; };
+		F7BAB3701780972B0000897D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F7BAB3721780972B0000897D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F7BAB3741780972B0000897D /* LOCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LOCAppDelegate.h; sourceTree = "<group>"; };
+		F7BAB3751780972B0000897D /* LOCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LOCAppDelegate.m; sourceTree = "<group>"; };
+		F7BAB3771780972B0000897D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		F7BAB3791780972B0000897D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		F7BAB37B1780972B0000897D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F7BAB3591780972B0000897D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7BAB3601780972B0000897D /* UIKit.framework in Frameworks */,
+				F7BAB3621780972B0000897D /* Foundation.framework in Frameworks */,
+				F7BAB3641780972B0000897D /* CoreGraphics.framework in Frameworks */,
+				74F5136853D6412890446476 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F7BAB3531780972B0000897D = {
+			isa = PBXGroup;
+			children = (
+				F7BAB3651780972B0000897D /* LOCViewer */,
+				F7BAB35E1780972B0000897D /* Frameworks */,
+				F7BAB35D1780972B0000897D /* Products */,
+				995099E64E2A4E2CB569CF21 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		F7BAB35D1780972B0000897D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7BAB35C1780972B0000897D /* LOCViewer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F7BAB35E1780972B0000897D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F7BAB35F1780972B0000897D /* UIKit.framework */,
+				F7BAB3611780972B0000897D /* Foundation.framework */,
+				F7BAB3631780972B0000897D /* CoreGraphics.framework */,
+				1A38DFE4103A45E6B21898A4 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F7BAB3651780972B0000897D /* LOCViewer */ = {
+			isa = PBXGroup;
+			children = (
+				F7BAB3661780972B0000897D /* Podfile */,
+				F7BAB3741780972B0000897D /* LOCAppDelegate.h */,
+				F7BAB3751780972B0000897D /* LOCAppDelegate.m */,
+				F7BAB36A1780972B0000897D /* Networking */,
+				F7BAB3681780972B0000897D /* Supporting Files */,
+			);
+			path = LOCViewer;
+			sourceTree = "<group>";
+		};
+		F7BAB3681780972B0000897D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F7BAB3691780972B0000897D /* LOCViewer-Prefix.pch */,
+				F7BAB36E1780972B0000897D /* LOCViewer-Info.plist */,
+				F7BAB36F1780972B0000897D /* InfoPlist.strings */,
+				F7BAB3721780972B0000897D /* main.m */,
+				F7BAB3771780972B0000897D /* Default.png */,
+				F7BAB3791780972B0000897D /* Default@2x.png */,
+				F7BAB37B1780972B0000897D /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F7BAB36A1780972B0000897D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F7BAB36B1780972B0000897D /* LOCViewerAPIClient.h */,
+				F7BAB36C1780972B0000897D /* LOCViewerAPIClient.m */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F7BAB35B1780972B0000897D /* LOCViewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7BAB37F1780972B0000897D /* Build configuration list for PBXNativeTarget "LOCViewer" */;
+			buildPhases = (
+				6A188BEA6C6B407C8D75F33C /* Check Pods Manifest.lock */,
+				F7BAB3581780972B0000897D /* Sources */,
+				F7BAB3591780972B0000897D /* Frameworks */,
+				F7BAB35A1780972B0000897D /* Resources */,
+				F1990D8150BF4DA0AB4CF476 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LOCViewer;
+			productName = LOCViewer;
+			productReference = F7BAB35C1780972B0000897D /* LOCViewer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F7BAB3541780972B0000897D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LOC;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Colin McArdell";
+			};
+			buildConfigurationList = F7BAB3571780972B0000897D /* Build configuration list for PBXProject "LOCViewer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F7BAB3531780972B0000897D;
+			productRefGroup = F7BAB35D1780972B0000897D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F7BAB35B1780972B0000897D /* LOCViewer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F7BAB35A1780972B0000897D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7BAB3671780972B0000897D /* Podfile in Resources */,
+				F7BAB3711780972B0000897D /* InfoPlist.strings in Resources */,
+				F7BAB3781780972B0000897D /* Default.png in Resources */,
+				F7BAB37A1780972B0000897D /* Default@2x.png in Resources */,
+				F7BAB37C1780972B0000897D /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6A188BEA6C6B407C8D75F33C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
+		F1990D8150BF4DA0AB4CF476 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F7BAB3581780972B0000897D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7BAB36D1780972B0000897D /* LOCViewerAPIClient.m in Sources */,
+				F7BAB3731780972B0000897D /* main.m in Sources */,
+				F7BAB3761780972B0000897D /* LOCAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F7BAB36F1780972B0000897D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7BAB3701780972B0000897D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F7BAB37D1780972B0000897D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F7BAB37E1780972B0000897D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F7BAB3801780972B0000897D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 995099E64E2A4E2CB569CF21 /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LOCViewer/LOCViewer-Prefix.pch";
+				INFOPLIST_FILE = "LOCViewer/LOCViewer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F7BAB3811780972B0000897D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 995099E64E2A4E2CB569CF21 /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LOCViewer/LOCViewer-Prefix.pch";
+				INFOPLIST_FILE = "LOCViewer/LOCViewer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F7BAB3571780972B0000897D /* Build configuration list for PBXProject "LOCViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7BAB37D1780972B0000897D /* Debug */,
+				F7BAB37E1780972B0000897D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7BAB37F1780972B0000897D /* Build configuration list for PBXNativeTarget "LOCViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7BAB3801780972B0000897D /* Debug */,
+				F7BAB3811780972B0000897D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F7BAB3541780972B0000897D /* Project object */;
+}

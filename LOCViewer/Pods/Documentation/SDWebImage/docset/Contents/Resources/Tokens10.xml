@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/UIImage+GIF.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/UIImage(GIF)</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>UIImage+GIF.h</DeclaredIn>
+			
+			<NodeRef refid="10"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/UIImage(GIF)/sd_animatedGIFNamed:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>UIImage+GIF.h</DeclaredIn>			
+			
+			<Declaration>+ (UIImage *)sd_animatedGIFNamed:(NSString *)name</Declaration>
+			
+			
+			<Anchor>//api/name/sd_animatedGIFNamed:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/UIImage(GIF)/sd_animatedGIFWithData:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>UIImage+GIF.h</DeclaredIn>			
+			
+			<Declaration>+ (UIImage *)sd_animatedGIFWithData:(NSData *)data</Declaration>
+			
+			
+			<Anchor>//api/name/sd_animatedGIFWithData:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/UIImage(GIF)/sd_animatedImageByScalingAndCroppingToSize:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>UIImage+GIF.h</DeclaredIn>			
+			
+			<Declaration>- (UIImage *)sd_animatedImageByScalingAndCroppingToSize:(CGSize)size</Declaration>
+			
+			
+			<Anchor>//api/name/sd_animatedImageByScalingAndCroppingToSize:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

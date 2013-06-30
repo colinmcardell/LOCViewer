@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/colinmcardell/Library/Developer/Shared/Documentation/DocSets/org.cocoapods.libwebp.libwebp-0.3.0-rc7.docset
+Time: 2013-06-30 16:49:44 +0000
