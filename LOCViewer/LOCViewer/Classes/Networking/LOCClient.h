@@ -10,8 +10,6 @@
 
 @class LOCSearchFeed;
 
-typedef void(^LOCClientCompletionBlock)(id responseObject);
-
 @interface LOCClient : OVCClient
 
 + (LOCClient *)sharedClient;

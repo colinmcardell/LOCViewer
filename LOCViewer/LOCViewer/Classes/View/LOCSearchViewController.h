@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Colin McArdell. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "LOCViewController.h"
 
-@interface LOCSearchViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface LOCSearchViewController : LOCViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
