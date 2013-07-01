@@ -40,12 +40,14 @@ PODS:
     - SDWebImage/MapKit
   - SDWebImage/MapKit (3.3):
     - libwebp
+  - SVPullToRefresh (0.4.1)
 
 DEPENDENCIES:
   - FormatterKit (~> 1.1.2)
   - Mantle (~> 1.1)
   - Overcoat (~> 0.2)
   - SDWebImage (~> 3.3)
+  - SVPullToRefresh (~> 0.4.1)
 
 SPEC CHECKSUMS:
   AFNetworking: a44069e3c9c89867544f6639482f155c7e5f9b41
@@ -55,5 +57,6 @@ SPEC CHECKSUMS:
   Mantle: aba2facc6ee8f97512a94768dc57c82b7802948c
   Overcoat: e6f10fc287ce6582735aab6cde224f769daf9a07
   SDWebImage: 79a8bac9ccf85b269100b294f7b43684dab8bf8a
+  SVPullToRefresh: 61a0e4bd12bd6f8e3465909810b0fbeb1a28d5f2
 
 COCOAPODS: 0.19.1

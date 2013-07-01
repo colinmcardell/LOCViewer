@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/colinmcardell/Library/Developer/Shared/Documentation/DocSets/org.cocoapods.svpulltorefresh.SVPullToRefresh-0.4.1.docset
+Time: 2013-07-01 00:11:22 +0000

@@ -13,11 +13,15 @@
 #import "LOCSearchViewCell.h"
 
 #import <SDWebImage/UIImageView+WebCache.h>
+#import <SVPullToRefresh/SVPullToRefresh.h>
 
 @interface LOCSearchViewController ()
 
 @property (strong, nonatomic) LOCSearchFeed *searchFeed;
 @property (strong, nonatomic) NSMutableArray *dataSource;
+
+- (void)fetchNextPage;
+- (void)mergeNewData:(NSArray *)newData;
 
 @end
 
@@ -28,6 +32,11 @@
     [super viewDidLoad];
     
     [self.tableView setBackgroundColor:[UIColor grayColor]];
+    [self.tableView addInfiniteScrollingWithActionHandler:^{
+        if ([self.dataSource count]) {
+            [self fetchNextPage];
+        }
+    }];
     
     NSBundle *bundle = [NSBundle mainBundle];
     
@@ -51,23 +60,51 @@
     [self.navigationController setNavigationBarHidden:YES animated:NO];
 }
 
+#pragma mark - Private
+
+- (void)fetchNextPage
+{
+    [[LOCClient sharedClient] fetchNextPageOfSearchFeed:[self searchFeed]
+                                        completionBlock:^(OVCRequestOperation *operation, id object, NSError *error) {
+                                            [self.tableView.infiniteScrollingView stopAnimating];
+                                            if (!error) {
+                                                [self setSearchFeed:object];
+                                                NSArray *results = [[object valueForKey:@"results"] copy];
+                                                [self mergeNewData:results];
+                                            }
+                                        }];
+}
+
+- (void)mergeNewData:(NSArray *)newData
+{
+    NSUInteger initialCount = [self.dataSource count];
+    [self.dataSource addObjectsFromArray:newData];
+    
+    NSUInteger newCount = [self.dataSource count];
+    if (newCount - initialCount > 0) {
+        NSMutableArray *indexPaths = [[NSMutableArray alloc] initWithCapacity:newCount - initialCount];
+        for (NSUInteger i = initialCount; i < newCount; ++i) [indexPaths addObject:[NSIndexPath indexPathForRow:i inSection:0]];
+        [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationNone];
+    }
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return [self.dataSource count];
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return [self.dataSource count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     LOCSearchViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([LOCSearchViewCell class])];
     
-    LOCPicture *picture = [self.dataSource objectAtIndex:indexPath.section];
+    LOCPicture *picture = [self.dataSource objectAtIndex:indexPath.row];
     
     [cell.title setText:[picture title]];
     NSString *notAvailable = @"Information Not Available";
