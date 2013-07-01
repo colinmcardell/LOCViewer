@@ -46,6 +46,7 @@
     [self.tableView registerNib:searchCellNib forCellReuseIdentifier:searchCellClass];
     
     // Fetch some data
+
     [[LOCClient sharedClient] executeSearch:@"congress"
                             completionBlock:^(OVCRequestOperation *operation, id object, NSError *error) {
                                 [self_weak_ setSearchFeed:object];
