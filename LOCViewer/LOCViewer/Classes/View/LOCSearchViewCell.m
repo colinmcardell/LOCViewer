@@ -7,6 +7,7 @@
 //
 
 #import "LOCSearchViewCell.h"
+
 #import <SDWebImage/UIImageView+WebCache.h>
 
 @implementation LOCSearchViewCell

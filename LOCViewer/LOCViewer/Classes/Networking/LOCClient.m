@@ -7,16 +7,17 @@
 //
 
 #import "LOCClient.h"
-#import <Overcoat/OVCQuery.h>
 #import "LOCRequestOperation.h"
-
 #import "LOCSearchFeed.h"
+
+#import <Overcoat/OVCQuery.h>
 
 static NSString * const kLOCAPIBaseURLString = @"http://www.loc.gov";
 
 @implementation LOCClient
 
-+ (LOCClient *)sharedClient {
++ (LOCClient *)sharedClient
+{
     static LOCClient *_sharedClient = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

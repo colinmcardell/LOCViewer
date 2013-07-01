@@ -7,5 +7,6 @@
     #import <MobileCoreServices/MobileCoreServices.h>
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import <libextobjc/EXTScope.h>
     #import "CSDebug.h"
 #endif

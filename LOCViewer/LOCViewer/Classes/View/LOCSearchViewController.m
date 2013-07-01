@@ -13,7 +13,7 @@
 #import "LOCSearchViewCell.h"
 
 #import <SDWebImage/UIImageView+WebCache.h>
-#import <SVPullToRefresh/SVPullToRefresh.h>
+#import <SVPullToRefresh/UIScrollView+SVInfiniteScrolling.h>
 
 @interface LOCSearchViewController ()
 
@@ -31,26 +31,27 @@
 {
     [super viewDidLoad];
     
+    @weakify(self);
     [self.tableView setBackgroundColor:[UIColor grayColor]];
+    
     [self.tableView addInfiniteScrollingWithActionHandler:^{
-        if ([self.dataSource count]) {
-            [self fetchNextPage];
+        if ([self_weak_.dataSource count]) {
+            [self_weak_ fetchNextPage];
         }
     }];
     
-    NSBundle *bundle = [NSBundle mainBundle];
-    
     // Cell
     NSString *searchCellClass = NSStringFromClass([LOCSearchViewCell class]);
-    UINib *searchCellNib = [UINib nibWithNibName:searchCellClass bundle:bundle];
+    UINib *searchCellNib = [UINib nibWithNibName:searchCellClass bundle:[NSBundle mainBundle]];
     [self.tableView registerNib:searchCellNib forCellReuseIdentifier:searchCellClass];
     
     // Fetch some data
+
     [[LOCClient sharedClient] executeSearch:@"congress"
                             completionBlock:^(OVCRequestOperation *operation, id object, NSError *error) {
-                                [self setSearchFeed:object];
-                                [self setDataSource:[[object valueForKey:@"results"] mutableCopy]];
-                                [self.tableView reloadData];
+                                [self_weak_ setSearchFeed:object];
+                                [self_weak_ setDataSource:[[object valueForKey:@"results"] mutableCopy]];
+                                [self_weak_.tableView reloadData];
                             }];
 }
 
@@ -64,13 +65,14 @@
 
 - (void)fetchNextPage
 {
+    @weakify(self);
     [[LOCClient sharedClient] fetchNextPageOfSearchFeed:[self searchFeed]
                                         completionBlock:^(OVCRequestOperation *operation, id object, NSError *error) {
-                                            [self.tableView.infiniteScrollingView stopAnimating];
+                                            [self_weak_.tableView.infiniteScrollingView stopAnimating];
                                             if (!error) {
-                                                [self setSearchFeed:object];
+                                                [self_weak_ setSearchFeed:object];
                                                 NSArray *results = [[object valueForKey:@"results"] copy];
-                                                [self mergeNewData:results];
+                                                [self_weak_ mergeNewData:results];
                                             }
                                         }];
 }
@@ -78,9 +80,9 @@
 - (void)mergeNewData:(NSArray *)newData
 {
     NSUInteger initialCount = [self.dataSource count];
+    NSUInteger newCount = initialCount + [newData count];
     [self.dataSource addObjectsFromArray:newData];
-    
-    NSUInteger newCount = [self.dataSource count];
+
     if (newCount - initialCount > 0) {
         NSMutableArray *indexPaths = [[NSMutableArray alloc] initWithCapacity:newCount - initialCount];
         for (NSUInteger i = initialCount; i < newCount; ++i) [indexPaths addObject:[NSIndexPath indexPathForRow:i inSection:0]];
