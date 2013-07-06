@@ -31,12 +31,13 @@
 {
     [super viewDidLoad];
     
-    @weakify(self);
     [self.tableView setBackgroundColor:[UIColor grayColor]];
     
+    @weakify(self);
     [self.tableView addInfiniteScrollingWithActionHandler:^{
-        if ([self_weak_.dataSource count]) {
-            [self_weak_ fetchNextPage];
+        @strongify(self);
+        if ([self.dataSource count]) {
+            [self fetchNextPage];
         }
     }];
     
@@ -48,9 +49,10 @@
     // Fetch some data
     [[LOCClient sharedClient] executeSearch:@"congress"
                             completionBlock:^(OVCRequestOperation *operation, id object, NSError *error) {
-                                [self_weak_ setSearchFeed:object];
-                                [self_weak_ setDataSource:[[object valueForKey:@"results"] mutableCopy]];
-                                [self_weak_.tableView reloadData];
+                                @strongify(self);
+                                [self setSearchFeed:object];
+                                [self setDataSource:[[object valueForKey:@"results"] mutableCopy]];
+                                [self.tableView reloadData];
                             }];
 }
 
@@ -67,11 +69,12 @@
     @weakify(self);
     [[LOCClient sharedClient] fetchNextPageOfSearchFeed:[self searchFeed]
                                         completionBlock:^(OVCRequestOperation *operation, id object, NSError *error) {
-                                            [self_weak_.tableView.infiniteScrollingView stopAnimating];
+                                            @strongify(self);
+                                            [self.tableView.infiniteScrollingView stopAnimating];
                                             if (!error) {
-                                                [self_weak_ setSearchFeed:object];
+                                                [self setSearchFeed:object];
                                                 NSArray *results = [[object valueForKey:@"results"] copy];
-                                                [self_weak_ mergeNewData:results];
+                                                [self mergeNewData:results];
                                             }
                                         }];
 }
