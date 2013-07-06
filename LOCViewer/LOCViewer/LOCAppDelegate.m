@@ -7,25 +7,24 @@
 //
 
 #import "LOCAppDelegate.h"
-
-#import "AFNetworkActivityIndicatorManager.h"
 #import "LOCSearchViewController.h"
+#import "AFNetworkActivityIndicatorManager.h"
 
 @implementation LOCAppDelegate
 
-- (BOOL)application:(UIApplication *)application
-didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:8 * 1024 * 1024 diskCapacity:20 * 1024 * 1024 diskPath:nil];
     [NSURLCache setSharedURLCache:URLCache];
     
     [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
     
-    LOCSearchViewController *searchVC = [[LOCSearchViewController alloc] initWithNibName:NSStringFromClass([LOCSearchViewController class]) bundle:[NSBundle mainBundle]];
-    self.navigationController = [[UINavigationController alloc] initWithRootViewController:searchVC];
+    NSString *nibName = NSStringFromClass([LOCSearchViewController class]);
+    LOCSearchViewController *searchVC = [[LOCSearchViewController alloc] initWithNibName:nibName bundle:[NSBundle mainBundle]];
+    [self setNavigationController:[[UINavigationController alloc] initWithRootViewController:searchVC]];
     
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = self.navigationController;
+    [self setWindow:[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]];
+    [self.window setRootViewController:[self navigationController]];
     [self.window makeKeyAndVisible];
     
     return YES;

@@ -111,7 +111,7 @@
     LOCPicture *picture = [self.dataSource objectAtIndex:indexPath.row];
     
     [cell.title setText:[picture title]];
-    NSString *notAvailable = @"Information Not Available";
+    NSString *notAvailable = @"Information not available";
     [cell.publish setText:[picture createdPublishedDate] ? [picture createdPublishedDate] : notAvailable];
     [cell.medium setText:[picture medium] ? [picture medium] : notAvailable];
     [cell.creator setText:[picture creator] ? [picture creator] : notAvailable];
